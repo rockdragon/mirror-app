@@ -38,6 +38,8 @@ const Counter = connect(state => {
       <button onClick={() => actions.counter.increment()}>+</button>
       {/* dispatch the async action */}
       <button onClick={() => actions.counter.incrementAsync()}>+ Async</button>
+
+      <input type="text" onChange={(e) => actions.greeting.change(e.target.value)} />
     </div>
   )
 )

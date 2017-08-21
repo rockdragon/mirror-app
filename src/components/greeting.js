@@ -16,10 +16,11 @@ mirror.model({
 
 // connect state with component
 const Greeting = connect(state => {
-  return { who: state.greeting }
+  return { who: state.greeting, counter: state.counter }
 })(props => (
     <div>
       <h2>Welcome, {props.who}!</h2>
+      <h4>Counter: {props.counter}</h4>
       <input type="text" onChange={(e) => actions.greeting.change(e.target.value)} />
     </div>
   )
